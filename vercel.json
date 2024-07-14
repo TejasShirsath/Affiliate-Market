@@ -1,16 +1,15 @@
 {
-    "version":2,
+    "version": 2,
     "builds": [
-        {
-            "src":"data.py",
-            "use": "@vercel/python",
-            "config":{"runtime":"python3.11.9"}
-        }
+        { "src": "index.html", "use": "@vercel/static" },
+        { "src": "style.css", "use": "@vercel/static" },
+        { "src": "script.js", "use": "@vercel/static" },
+        { "src": "data.py", "use": "@vercel/python", "config": { "runtime": "python3.11.9" } }
     ],
     "routes": [
-        {
-            "src":"/(.*)",
-            "dest":"data.py"
-        }
+        { "src": "/style.css", "dest": "/style.css" },
+        { "src": "/script.js", "dest": "/script.js" },
+        { "src": "/api/(.*)", "dest": "data.py" },
+        { "src": "/(.*)", "dest": "/index.html" }
     ]
 }
