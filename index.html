@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Affiliate Store - Place of Unique Gadgets</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <section id="header">
+        <a href="index.html" class="logo"><img src="img/logo.png"></a>
+        <div> 
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a href="shop.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="shop.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i id="bar" class="fa-solid fa-outdent"></i>
+        </div>
+    </section>
+    <section id="hero">
+        <h4>Welcome to Affiliate Store</h4>
+        <h2>Your Destination for</h2>
+        <h1>Unique Gadgets</h1>
+        <p>Explore, Discover, Shop - It's All Here</p>
+        <button class="shopBtn" onclick="shopBtn()">
+            <span class="IconContainer"> 
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="#fff" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
+            </span>
+            <p class="text">Shop Now</p>
+        </button>
+        <script>function shopBtn(){ window.location.href = 'shop.html';}</script>
+
+        <div class="slide-container">
+            <div class="slides">
+                <a href="productDetails.html?productId=1"><img src="img/slider/slide1.png" id="slide" class="active"></a>
+                <a href="productDetails.html?productId=2"><img src="img/slider/slide2.png" id="slide"></a>
+                <a href="productDetails.html?productId=11"><img src="img/slider/slide3.png" id="slide"></a>
+                <a href="productDetails.html?productId=18"><img src="img/slider/slide4.png" id="slide"></a>
+                <a href="productDetails.html?productId=13"><img src="img/slider/slide5.png" id="slide"></a>
+                <a href="productDetails.html?productId=12"><img src="img/slider/slide6.png" id="slide"></a>
+            </div>
+
+            <div class="dotsContainer">
+                <div class="dot active" attr='0' onclick="HomePageSlider.switchImage(this)"></div>
+                <div class="dot" attr='1' onclick="HomePageSlider.switchImage(this)"></div>
+                <div class="dot" attr='2' onclick="HomePageSlider.switchImage(this)"></div>
+                <div class="dot" attr='3' onclick="HomePageSlider.switchImage(this)"></div>
+                <div class="dot" attr='4' onclick="HomePageSlider.switchImage(this)"></div>
+                <div class="dot" attr='5' onclick="HomePageSlider.switchImage(this)"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>Featured Products</h2>
+        <p>All Unique Gadgets Collection</p>
+        <div class="product-container" id="featuredProductContainer-Dynamic">
+            <!-- javascript dynamic assignment -->
+        </div>
+    </section>
+    
+
+    <section class="carousel">
+        <div class="list">
+            <div class="item">
+                <img src="img/slider/slide1.png">
+                <div class="introduce">
+                    <div class="title">Push up board - Home workout</div>
+                    <div class="des">
+                        Push-up board are fitness equipment designed to help people perform push-ups with proper form.
+                    </div>
+                    <button class="shopBtn" onclick="productDetails(1)">
+                        <span class="IconContainer"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="#fff" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
+                        </span>
+                        <p class="text">Check out</p>
+                    </button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/shoppage_slider/slide2.png">
+                <div class="introduce">
+                    <div class="title">Portable Smart Mini Projector</div>
+                    <div class="des">
+                        Portable Smart Projector with Android 11, 4K Ultra HD Support, Rechargeable.
+                    </div>
+                    <button class="shopBtn" onclick="productDetails(6)">
+                        <span class="IconContainer"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="#fff" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
+                        </span>
+                        <p class="text">Check out</p>
+                    </button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/slider/slide4.png">
+                <div class="introduce">
+                    <div class="title">Plastic Juice Maker</div>
+                    <div class="des">
+                        Effortlessly extract nutritious juices with electric juicer, enjoy fresh fruit juices in minutes.
+                    </div>
+                    <button class="shopBtn" onclick="productDetails(18)">
+                        <span class="IconContainer"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="#fff" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
+                        </span>
+                        <p class="text">Check out</p>
+                    </button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/shoppage_slider/slide4.png">
+                <div class="introduce">
+                    <div class="title">Mobile Camera 20x Macro Lens</div>
+                    <div class="des">
+                        Mobile Camera 20x Macro Lens Kit: Elevate your mobile photography to new heights with this high-quality lens kit.
+                    </div>
+                    <button class="shopBtn" onclick="productDetails(4)">
+                        <span class="IconContainer"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="#fff" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
+                        </span>
+                        <p class="text">Check out</p>
+                    </button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/slider/slide6.png">
+                <div class="introduce">
+                    <div class="title">USB Scrolling LED Sign</div>
+                    <div class="des">
+                        LED Sign 5V USB Scrolling LED Sign Bluetooth APP Control DIY Text Pattern Flexible LED Sign
+                    </div>
+                    <button class="shopBtn" onclick="productDetails(12)">
+                        <span class="IconContainer"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="#fff" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
+                        </span>
+                        <p class="text">Check out</p>
+                    </button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/slider/slide3.png">
+                <div class="introduce">
+                    <div class="title">LED Backpack with APP working</div>
+                    <div class="des">
+                        Led Standard Backpack With App Working, Riding - Waterproof Backpack With Programmable And Color Screen.
+                    </div>
+                    <button class="shopBtn" onclick="productDetails(11)">
+                        <span class="IconContainer"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="#fff" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
+                        </span>
+                        <p class="text">Check out</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="arrows">
+            <button id="shoppage-prev">&lt;</button>
+            <button id="shoppage-next">&gt;</button>
+        </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>New Arrivals</h2>
+        <p>All unique products collection</p>
+        <div class="product-container" id="productContainer-Dynamic">
+            <!-- javascript dynamic assignment -->
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><span class="arrow">&#8594;</span>Home</a></li>
+                        <li><a href="shop.html"><span class="arrow">&#8594;</span>Shop</a></li>
+                        <li><a href="about.html"><span class="arrow">&#8594;</span>About Us</a></li>
+                        <li><a href="contact.html"><span class="arrow">&#8594;</span>Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="index.html"><span class="arrow">&#8594;</span>Home</a></li>
+                        <li><a href="shop.html"><span class="arrow">&#8594;</span>Shop</a></li>
+                        <li><a href="about.html"><span class="arrow">&#8594;</span>About Us</a></li>
+                        <li><a href="contact.html"><span class="arrow">&#8594;</span>Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get In Touch</h4>
+                    <ul>
+                        <li><a href="https://maps.app.goo.gl/YWix7iKfvh3r6HDw6"><i class="fa-solid fa-location-dot icon"></i>Suite 111 942 Auer Road, Leuschkeborough, IA 69461</a></li>
+                        <li><a href="mailto:contact@abc.com"><i class="fa-solid fa-envelope icon"></i>contact@abc.com</a></li>
+                        <li><a href="tel:+91987xxxx210"><i class="fa-solid fa-phone icon"></i>+91 91987xxxx210</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/tejas_s_shirsath"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/tejas-shirsath-18149b2bb"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <span>&copy; 2024 Tejas Shirsath. All Rights Reserved.</span>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
