@@ -338,7 +338,7 @@ if (currentUrl.includes("shop") || currentUrl.includes("shop.html")) {
     heroSliderShopPage();
 }
 
-if (currentUrl.includes("productDetails") || currentUrl.includes("productDetails.html")) {
+if (currentUrl.includes("productdetails") || currentUrl.includes("productdetails.html")) {
     var productId = atob(urlParameter('productId'));
     fetchData(productId);
     productList();
