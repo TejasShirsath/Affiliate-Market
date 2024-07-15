@@ -1,4 +1,4 @@
-const webfileLocation = "C:\Users\tejas\OneDrive\Desktop\Tejas-Online\GitHub\Affliate-Market" //change this to your own webfiles location
+const webfileLocation = "https://affiliate-market.netlify.app" //change this to your own webfiles location
 
 const pages = ["shop.html", "productDetails.html", "about.html", "contact.html"];
 const currentUrl = window.location.href;
