@@ -2,6 +2,7 @@ const webfileLocation = "C:\Users\tejas\OneDrive\Desktop\Tejas-Online\GitHub\Aff
 
 const pages = ["shop.html", "productDetails.html", "about.html", "contact.html"];
 const currentUrl = window.location.href;
+const backendUrl = "https://affiliate-market-wheat.vercel.app"
 
 
 function navbar(){
@@ -93,7 +94,7 @@ const HomePageSlider = new homePageSlider();
 
 function productList(){
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:5000/data', true);
+    xhr.open('GET', backendUrl+'/data', true);
 
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
@@ -192,7 +193,7 @@ function urlParameter(name) {
 
 function fetchData(productId) {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:5000/product?id=' + productId, true);
+    xhr.open('GET', backendUrl+'/product?id=' + productId, true);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             var data = JSON.parse(xhr.responseText);
