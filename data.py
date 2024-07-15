@@ -1,15 +1,19 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import mysql.connector
+import os
+
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
 
 # Database connection
-servername = "localhost"
-username = "root"
-password = ""
-dbname = "doremonpocket"
+servername = os.getenv("host")
+username = os.getenv("database_user")
+password = os.getenv("database_password")
+dbname = os.getenv("database_name")
 
 def fetch_data(cursor, table, columns):
     cursor.execute(f"SELECT {', '.join(columns)} FROM {table}")
@@ -32,8 +36,8 @@ def get_all_data():
     featured_columns = ["id", "productTitle", "productImg1", "productVideo"]
 
     # Fetch data from tables
-    products = fetch_data(cursor, "productsTable", product_columns)
-    featured_products = fetch_data(cursor, "featuredProducts", featured_columns)
+    products = fetch_data(cursor, "productstable", product_columns)
+    featured_products = fetch_data(cursor, "featuredproducts", featured_columns)
 
     cursor.close()
     conn.close()
@@ -61,7 +65,7 @@ def get_product():
 
     cursor = conn.cursor(dictionary=True)
 
-    sql = "SELECT * FROM productsTable WHERE id = %s"
+    sql = "SELECT * FROM productstable WHERE id = %s"
     cursor.execute(sql, (product_id,))
     row = cursor.fetchone()
 
