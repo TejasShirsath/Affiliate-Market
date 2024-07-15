@@ -180,7 +180,7 @@ function productList(){
 }
 
 function productDetails(productId) {
-    var url = "productDetails.html?productId=" + btoa(productId);
+    var url = "productDetails?productId=" + btoa(productId);
     window.location.href = url;
 }
 
