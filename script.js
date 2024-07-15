@@ -328,20 +328,17 @@ function heroSliderShopPage() {
 // run script
 
 if (!pages.some(page => currentUrl.includes(page)) || currentUrl.includes("index.html")) {
-    console.log("index page satisfied")
     HomePageSlider.autoSliding();
     productList();
     heroSliderShopPage();
 }
 
 if (currentUrl.includes("shop") || currentUrl.includes("shop.html")) {
-    console.log("shop page satisfied")
     productList();
     heroSliderShopPage();
 }
 
 if (currentUrl.includes("productdetails") || currentUrl.includes("productdetails.html")) {
-    console.log("productdetails page satisfied")
     var productId = atob(urlParameter('productId'));
     fetchData(productId);
     productList();
