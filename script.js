@@ -1,6 +1,6 @@
 const webfileLocation = "https://affiliate-market.netlify.app" //change this to your own webfiles location
 
-const pages = ["shop", "productDetails", "about", "contact"];
+const pages = ["shop", "productdetails", "about", "contact"];
 const currentUrl = window.location.href;
 const backendUrl = "https://affiliate-market-wheat.vercel.app"
 
