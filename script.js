@@ -93,6 +93,20 @@ const HomePageSlider = new homePageSlider();
 
 
 function productList(){
+    var featuredProductContainerDynamic = document.getElementById("featuredProductContainer-Dynamic");
+    var productContainerDynamic = document.getElementById("productContainer-Dynamic");
+
+    if (!pages.some(page => currentUrl.includes(page)) || currentUrl.includes("index.html")) {
+        for (var i = 0; i < 8; i++) {
+            featuredProductContainerDynamic.innerHTML += '<div class="product skeleton" style="height: 300px; border: none;"></div>';  
+        }
+    }
+    for (var i = 0; i < 8; i++) {
+        productContainerDynamic.innerHTML += '<div class="product skeleton" style="height: 300px; border: none;"></div>';  
+    }
+
+
+
     var xhr = new XMLHttpRequest();
     xhr.open('GET', backendUrl+'/data', true);
 
@@ -107,8 +121,9 @@ function productList(){
 
             // Featured - Product Container Code
             if (!pages.some(page => currentUrl.includes(page)) || currentUrl.includes("index.html")) {
-
-                var featuredProductContainerDynamic = document.getElementById("featuredProductContainer-Dynamic");
+                while (featuredProductContainerDynamic.firstChild) {
+                    featuredProductContainerDynamic.removeChild(featuredProductContainerDynamic.firstChild);
+                }
 
                 for (var i = 0; i < featuredProducts.length; i++) {
                     featuredProductContainerDynamic.innerHTML += '<div class="product" onclick="productDetails('+featuredProducts[i].id+')">' +
@@ -127,7 +142,10 @@ function productList(){
             }
 
             //Product Container Code
-            var productContainerDynamic = document.getElementById("productContainer-Dynamic");
+            
+            while (productContainerDynamic.firstChild) {
+                productContainerDynamic.removeChild(productContainerDynamic.firstChild);
+            }
 
             for (var i = products.length-1; i >= 0; i--) {
                 productContainerDynamic.innerHTML += '<div class="product" onclick="productDetails('+products[i].id+')">' +

@@ -318,6 +318,33 @@ span.prev {
     }
 }
 
+
+/* SKELETON */
+.skeleton {
+    position: relative;
+}
+.skeleton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #eaeaea, #f2f2f2, #eaeaea);
+    background-size: 200%;
+    animation: skeleton 1s infinite reverse;
+}
+@keyframes skeleton {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+/* SKELETON */
+
 #product1 {
     text-align: center;
 }
