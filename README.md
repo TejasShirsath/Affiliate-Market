@@ -44,7 +44,7 @@ Affiliate-Market is a web-based platform designed to enhance the affiliate marke
 
     - Download and install [XAMPP](https://www.apachefriends.org/index.html).
     - Start the XAMPP control panel and start the Apache and MySQL modules.
-    - Create a new database for the project using phpMyAdmin (accessible via `http://localhost/phpmyadmin`).
+    - Import database.sql in phpMyAdmin (accessible via `http://localhost/phpmyadmin`).
 
 4. Configure the database settings in your project:
 
