@@ -15,16 +15,16 @@ Affiliate-Market is a web-based platform designed to enhance the affiliate marke
 
 ## Technologies Used
 
-- **HTML**: For structuring the web pages.
-- **CSS**: For styling and responsive design.
-- **JavaScript**: For interactive elements and dynamic content.
-- **Python**: For backend processing and server-side scripting.
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: Python
+- **Database**: MySQL
 
 ## Getting Started
 
 ### Prerequisites
 
 - [Python](https://www.python.org/downloads/)
+- [XAMPP](https://www.apachefriends.org) (for MySQL database)
 - A modern web browser (Chrome, Firefox, Safari, etc.)
 
 ### Installation
@@ -35,14 +35,22 @@ Affiliate-Market is a web-based platform designed to enhance the affiliate marke
     git clone https://github.com/TejasShirsath/Affiliate-Market.git
     cd affiliate-market
     ```
-
 2. Set up the backend environment:
 
     ```bash
     pip install -r requirements.txt
     ```
+3. Set up XAMPP for MySQL database:
 
-3. Run the development server:
+    - Download and install [XAMPP](https://www.apachefriends.org/index.html).
+    - Start the XAMPP control panel and start the Apache and MySQL modules.
+    - Create a new database for the project using phpMyAdmin (accessible via `http://localhost/phpmyadmin`).
+
+4. Configure the database settings in your project:
+
+    - Update the database configuration in data.py
+
+5. Run the development server:
 
     ```bash
     python data.py
