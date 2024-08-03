@@ -1335,6 +1335,10 @@ form{
         gap: 0;
         flex-direction: column;
     }
+
+     .shopBtn{
+         display: none;
+     }
 }
 
 
